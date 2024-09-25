@@ -8,6 +8,8 @@ import { LocalNotifications } from '@capacitor/local-notifications';
 })
 export class NotificationComponent  implements OnInit {
 
+  message: string | null = null;
+
   constructor() { }
 
   ngOnInit() {}
@@ -17,6 +19,8 @@ export class NotificationComponent  implements OnInit {
     const hasPermission = await LocalNotifications.requestPermissions();
     
     if (hasPermission.display === 'granted') {
+      this.message = "Permissão concedida para notificações.";
+
       // Disparar uma notificação local
       await LocalNotifications.schedule({
         notifications: [
@@ -31,7 +35,7 @@ export class NotificationComponent  implements OnInit {
         ]
       });
     } else {
-      console.error("Permissão negada para notificações.");
+      this.message = "Permissão negada para notificações.";
     }
   }
 }

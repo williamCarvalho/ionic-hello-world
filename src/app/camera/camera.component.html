@@ -14,4 +14,8 @@
   <div *ngIf="capturedImage">
     <img [src]="capturedImage" alt="Captured Image" />
   </div>
+
+  <div *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
 </ion-content>

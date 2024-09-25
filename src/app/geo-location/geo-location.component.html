@@ -15,4 +15,8 @@
     <p>Latitude: {{ currentLocation.latitude }}</p>
     <p>Longitude: {{ currentLocation.longitude }}</p>
   </div>
+
+  <div *ngIf="errorMessage">
+    <p>{{ errorMessage }}</p>
+  </div>
 </ion-content>

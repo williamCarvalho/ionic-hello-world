@@ -9,6 +9,7 @@ import { Geolocation } from '@capacitor/geolocation';
 export class GeoLocationComponent  implements OnInit {
 
   currentLocation: { latitude: number; longitude: number } | undefined;
+  errorMessage: string | null = null;
 
   constructor() { }
 
@@ -23,7 +24,11 @@ export class GeoLocationComponent  implements OnInit {
         longitude: coordinates.coords.longitude,
       };
     } catch (error) {
-      console.error('Error getting location', error);
+      if (error instanceof Error) {
+        this.errorMessage = 'Erro ao obter localização: ' + error.message;
+      } else {
+        this.errorMessage = 'Erro desconhecido ao obter localização.';
+      }
     }
   }
 

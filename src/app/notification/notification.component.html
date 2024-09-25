@@ -10,4 +10,8 @@
   <ion-button (click)="triggerNotification()">
     Trigger Notification
   </ion-button>
+
+  <div *ngIf="message">
+    <p>{{ message }}</p>
+  </div>
 </ion-content>
