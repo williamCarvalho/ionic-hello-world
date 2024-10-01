@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "756102739832",
+    "project_id": "ionic-capacitor-5f30d",
+    "storage_bucket": "ionic-capacitor-5f30d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756102739832:android:65b7f24d2a0e930e4c7a8d",
+        "android_client_info": {
+          "package_name": "io.ionic.helloworld"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY9dGvq5d2Dom7osyfzy4TAwvAzOTfvTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
